@@ -7,3 +7,73 @@
 * {
   margin: 0px;
 }
+
+body {
+  background-image: url(BackgroundImg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
+}
+
+#container {
+  min-width: 100vw;
+  display: flex;
+  justify-content: flex-end;
+}
+
+#formContainer {
+  width: 45vw;
+  min-height: 100vh;
+  background-color: rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.formHead {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  text-align: center;
+}
+
+#logo {
+  width: 10rem;
+  height: 10rem;
+  margin-top: 3vh;
+}
+
+.formHeader {
+  font-size: 2rem;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 5vw;
+}
+
+.formInputs {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin-top: 50px;
+  font-size: 1.5rem;
+}
+
+.formInputs input {
+  width: 65%;
+  height: 4vh;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+
+#submit {
+  margin-top: 50px;
+}
+
+label {
+  font-weight: bold;
+}

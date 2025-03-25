@@ -7,5 +7,51 @@
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body></body>
+  <body>
+    <div id="container">
+      <div id="formContainer">
+        <div class="formHead">
+          <img id="logo" src="Logo.png" alt="Logo" />
+          <h1 class="formHeader">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum,
+            rerum.
+          </h1>
+        </div>
+        <form action="#">
+          <div class="formInputs">
+            <label for="firstName">First Name</label>
+            <input type="text" name="firstName" id="firstName" required />
+          </div>
+          <div class="formInputs">
+            <label for="lastName">Last Name</label>
+            <input type="text" name="lastName" id="lastName" required />
+          </div>
+          <div class="formInputs">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" required />
+          </div>
+          <div class="formInputs">
+            <label for="phoneNumber">Phone Number</label>
+            <input type="text" name="phoneNumber" id="phoneNumber" required />
+          </div>
+          <div class="formInputs">
+            <label for="password">Password</label>
+            <input type="password" name="Password" id="Password" required />
+          </div>
+          <div class="formInputs">
+            <label for="passwordConfirm">Password Comfirm</label>
+            <input
+              type="password"
+              name="passwordConfirm"
+              id="passwordConfirm"
+              required
+            />
+          </div>
+          <div class="formSubmit">
+            <button type="submit" id="submit">Create Account</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
 </html>

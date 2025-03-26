@@ -19,33 +19,45 @@
         </div>
         <form action="#">
           <div class="formInputs">
-            <label for="firstName">First Name</label>
-            <input type="text" name="firstName" id="firstName" required />
-          </div>
-          <div class="formInputs">
-            <label for="lastName">Last Name</label>
-            <input type="text" name="lastName" id="lastName" required />
-          </div>
-          <div class="formInputs">
-            <label for="email">Email</label>
-            <input type="email" name="email" id="email" required />
-          </div>
-          <div class="formInputs">
-            <label for="phoneNumber">Phone Number</label>
-            <input type="text" name="phoneNumber" id="phoneNumber" required />
-          </div>
-          <div class="formInputs">
-            <label for="password">Password</label>
-            <input type="password" name="Password" id="Password" required />
-          </div>
-          <div class="formInputs">
-            <label for="passwordConfirm">Password Comfirm</label>
+            <label for="firstName">First Name<span class="req">*</span></label>
             <input
-              type="password"
-              name="passwordConfirm"
-              id="passwordConfirm"
+              type="text"
+              name="firstName"
+              id="firstName"
+              minlength="2"
+              required
+              autocomplete="off"
+            />
+          </div>
+          <div class="formInputs">
+            <label for="lastName">Last Name<span class="req">*</span> </label>
+            <input
+              type="text"
+              name="lastName"
+              id="lastName"
+              minlength="2"
               required
             />
+          </div>
+          <div class="formInputs">
+            <label for="email">Email<span class="req">*</span></label>
+            <input type="email" name="email" id="email" required />
+          </div>
+
+          <div class="formInputs">
+            <label for="password">Password<span class="req">*</span></label>
+            <input
+              type="password"
+              name="Password"
+              id="Password"
+              pattern="^(?=.*[a-z])(?=.*[A-Z]).{8,}$"
+              required
+            />
+            <div class="passwordValidations">
+              <div id="characterReq">⨯ requires minimum 8 characters</div>
+              <div id="lowerCaseReq">⨯ requires minimum 1 lowercase letter</div>
+              <div id="upperCaseReq">⨯ requires minimum 1 uppercase letter</div>
+            </div>
           </div>
           <div class="formSubmit">
             <button type="submit" id="submit">Create Account</button>

@@ -26,6 +26,7 @@ body {
   width: 45vw;
   min-height: 100vh;
   background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
   display: flex;
   flex-direction: column;
   gap: 4rem;
@@ -66,8 +67,31 @@ form {
 .formInputs input {
   width: 65%;
   height: 4vh;
-  border: 1px solid gray;
+  border: 2px solid gray;
   border-radius: 5px;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.094);
+}
+.formInputs input:focus {
+  border: 2px solid black;
+}
+
+.formInputs input:valid {
+  border: 3px solid rgba(0, 255, 4, 0.604);
+  background-color: rgba(0, 255, 4, 0.012);
+}
+
+.passwordValidations {
+  color: rgb(255, 51, 51);
+  font-size: 1.3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding-top: 5px;
+}
+
+.req {
+  color: rgb(255, 51, 51);
 }
 
 #submit {
@@ -76,4 +100,9 @@ form {
 
 label {
   font-weight: bold;
+}
+#characterReq,
+#lowerCaseReq,
+#upperCaseReq {
+  transition: color 0.2s ease-in-out;
 }

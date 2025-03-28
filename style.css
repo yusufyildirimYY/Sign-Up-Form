@@ -6,6 +6,7 @@
 
 * {
   margin: 0px;
+  font-family: "Roboto", sans-serif;
 }
 
 body {
@@ -62,6 +63,7 @@ form {
   width: 50%;
   margin-top: 50px;
   font-size: 1.5rem;
+  position: relative;
 }
 
 .formInputs input {
@@ -71,6 +73,8 @@ form {
   border-radius: 5px;
   outline: none;
   background-color: rgba(255, 255, 255, 0.094);
+  font-size: 1.3rem;
+  padding-left: 0.5rem;
 }
 .formInputs input:focus {
   border: 2px solid black;
@@ -81,21 +85,24 @@ form {
   background-color: rgba(0, 255, 4, 0.012);
 }
 
+.formInputs label {
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
 .passwordValidations {
   color: rgb(255, 51, 51);
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   display: flex;
   flex-direction: column;
   gap: 5px;
   padding-top: 5px;
+  position: absolute;
+  top: calc(35px + 3vh);
 }
 
 .req {
   color: rgb(255, 51, 51);
-}
-
-#submit {
-  margin-top: 50px;
 }
 
 label {
@@ -105,4 +112,31 @@ label {
 #lowerCaseReq,
 #upperCaseReq {
   transition: color 0.2s ease-in-out;
+}
+
+#submit {
+  margin-top: 40px;
+  padding: 1em 1em;
+  border-radius: 0.5rem;
+  border: 2px solid gray;
+  background-color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  transition: border 0.3s ease-in-out;
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+#submit:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 2px solid black;
+}
+@media (max-width: 1200px) {
+  #formContainer {
+    width: 65vw;
+  }
+}
+@media (max-width: 850px) {
+  #formContainer {
+    width: 100vw;
+  }
 }
